@@ -1,0 +1,26 @@
+asgiref==3.7.2
+brotlipy==0.7.0
+certifi @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_3bweqb8byn/croot/certifi_1690232244779/work/certifi
+cffi @ file:///Users/cbousseau/work/recipes/ci_py311/cffi_1677903595907/work
+charset-normalizer @ file:///tmp/build/80754af9/charset-normalizer_1630003229654/work
+cryptography @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_a3xvfhudbc/croot/cryptography_1689373681671/work
+Django==4.2.5
+filelock @ file:///Users/cbousseau/work/recipes/ci_py311/filelock_1677909105322/work
+gmpy2 @ file:///Users/cbousseau/work/recipes/ci_py311/gmpy2_1677937751357/work
+idna @ file:///Users/cbousseau/work/recipes/ci_py311/idna_1677906072337/work
+mpmath @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_17iu6a8a3m/croot/mpmath_1690848269369/work
+networkx @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_b9af3smw_7/croot/networkx_1690562010704/work
+numpy @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_a19y8c22jc/croot/numpy_and_numpy_base_1691091616945/work
+Pillow==9.4.0
+pycparser @ file:///tmp/build/80754af9/pycparser_1636541352034/work
+pyOpenSSL @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_b8whqav6qm/croot/pyopenssl_1690223428943/work
+PySocks @ file:///Users/cbousseau/work/recipes/ci_py311/pysocks_1677906386870/work
+PyYAML @ file:///Users/cbousseau/work/recipes/ci_py311/pyyaml_1677927153992/work
+requests @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_54zi68h2nb/croot/requests_1690400233316/work
+sqlparse==0.4.4
+sympy @ file:///Users/cbousseau/work/recipes/ci_py311_2/sympy_1678995976952/work
+torch==2.2.0.dev20230911
+torchaudio==2.2.0.dev20230911
+torchvision==0.17.0.dev20230911
+typing_extensions @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_1fdywrbp_3/croot/typing_extensions_1690297474455/work
+urllib3 @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_e9usuw__8i/croot/urllib3_1686166332689/work
