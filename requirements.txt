@@ -19,8 +19,8 @@ PyYAML
 requests 
 sqlparse==0.4.4
 sympy 
-torch==2.2.0.dev20230911
-torchaudio==2.2.0.dev20230911
-torchvision==0.17.0.dev20230911
+torch==2.0
+torchaudio==2.0
+torchvision==0.11
 typing_extensions 
 urllib3 
