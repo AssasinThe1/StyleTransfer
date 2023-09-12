@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,30 +6,47 @@
     <meta charset="UTF-8">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Style Transfer</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Styler</title>
+    <link rel="stylesheet" href="{% static 'webapp/styles.css' %}">
 </head>
 
 <body>
-    <div id='poweredBy'
-        style='position: fixed; right: 0; bottom: 0; background-color: #0078D7; color: white; padding: 10px; z-index: 1000; border-top-left-radius: 10px; font-family: Roboto, sans-serif;'>
-        <span class='info-icon' style='margin-right: 5px; font-size: 1.2em;'>&#x2139;</span> Powered by <b><a
-                href='https://converter.app' style='color: white;' target="_blank">Converter App</a></b>
-    </div>
-    <h1>Style Transfer</h1>
-    <form action="/stylize/" method="post" enctype="multipart/form-data">
+    
+    <div class="container">
+        <h1>Styler</h1>
+        <h2>Style Transfer</h2>
+        <form action="/stylize/" method="post" enctype="multipart/form-data" id="upload-form">
         {% csrf_token %}
-        <label for="content_image">Upload Image:</label>
-        <input type="file" id="content_image" name="content_image" required><br><br>
-        <label for="style_choice">Choose Style:</label>
-        <select id="style_choice" name="style_choice">
-            <option value="mosaic">Mosaic</option>
-            <option value="candy">Candy</option>
-            <option value="rain_princess">Rain Princess</option>
-            <option value="udnie">Udnie</option>
-        </select><br><br>
-        <input type="submit" value="Apply Style">
-    </form>
+        <div class="upload-section">
+            <label for="content_image">Upload Image:</label>
+            <input type="file" id="content_image" name="content_image" required onchange="displayImage(this)"><br><br>
+            <img id="uploaded-image" src="#" alt="Uploaded Image" style="display:none; max-width: 300px;">
+        </div>
+        <div class="style-section">
+            <label for="style_choice">Choose Style:</label>
+            <select id="style_choice" name="style_choice" onchange="displayStyleImage(this.value)">
+                <option value="mosaic" data-icon="path_to_mosaic_icon.png">Mosaic</option>
+                <option value="candy" data-icon="path_to_candy_icon.png">Candy</option>
+                <option value="rain_princess" data-icon="path_to_rain_princess_icon.png">Rain Princess</option>
+                <option value="udnie" data-icon="path_to_udnie_icon.png">Udnie</option>
+            </select><br><br>
+            <img id="style-preview" src="#" alt="Style Preview" style="max-width: 300px;">
+        </div>
+        <div class="submit-section">
+            <input type="submit" value="Apply Style">
+        </div>
+        </form>
+    </div>
+    <script>function displayImage(input) {
+            var reader = new FileReader(); reader.onload = function (e) { document.getElementById('uploaded-image').src = e.target.result; document.getElementById('uploaded-image').style.display = 'block'; }
+            reader.readAsDataURL(input.files[0]);
+        } function displayStyleImage(style) { 
+            var stylePath = { 
+                'mosaic': "{% static 'pictures/mosaic_sample.png' %}", 
+                'candy': "{% static 'pictures/candy_sample.png' %}", 
+                'rain_princess': "{% static 'pictures/rain_princess_sample.png' %}", 
+                'udnie': "{% static 'pictures/udnie_sample.png' %}" }; 
+                document.getElementById('style-preview').src = stylePath[style]; }</script>
 </body>
 
 </html>

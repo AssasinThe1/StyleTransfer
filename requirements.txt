@@ -21,6 +21,6 @@ sqlparse==0.4.4
 sympy 
 torch==2.0
 torchaudio==2.0
-torchvision==0.11
+torchvision==0.12
 typing_extensions 
 urllib3 
